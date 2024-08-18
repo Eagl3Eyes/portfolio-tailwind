@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/41e196d463.js" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        /* body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        } */
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            padding: 12px;
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 20%;
+        }
+
+        .swiper-slide-active {
+            opacity: 1;
+        }
+
+        .swiper-slide img {
+            display: block;
+            object-fit: cover;
+        }
+
+        /* .swiper-pagination {
+            margin-top: 30px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="bg-gray-700">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed. -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Icon when menu is open. -->
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex-shrink-0">
+                        <a href="#" class="text-white text-lg font-semibold">Your Logo Here</a>
+                    </div>
+                    <div class="hidden sm:block sm:ml-6">
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About
+                                Me</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Download
+                                CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="sm:hidden hidden">
+            <div class="px-2 pt-2 pb-4 space-y-1">
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Download
+                    CV</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <!-- Hero Section -->
+    <section class="mt-10 xl:mt-20">
+        <div class="flex flex-col md:flex-row xl:flex-row justify-center items-center gap-4 xl:gap-20">
+            <div class="p-2 xl:p-0 md:w-1/2 xl:w-1/4">
+                <h3 class="text-xl font-bold">Hi I am</h3>
+                <h3 class="text-2xl text-orange-500 font-bold">Fawzi Sayed</h3>
+                <h3 class="text-7xl font-bold">UI & UX</h3>
+                <h3 class="text-7xl font-bold text-end">Designer</h3>
+                <p class="mt-6">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in.
+                    Aliquet donec
+                    morbi convallis pretium. Turpis tempus pharetra</p>
+                <button class="px-6 py-2 rounded-md bg-orange-500 text-white mt-3">Hire Me</button>
+            </div>
+            <div>
+                <img class="xl:w-[530px] xl:h-[610px]" src="./images/1.png" alt="">
+
+                <div class="flex justify-center gap-4 mt-4">
+                    <i class="text-2xl fa-brands fa-facebook"></i>
+                    <i class="text-2xl fa-brands fa-twitter"></i>
+                    <i class="text-2xl fa-brands fa-instagram"></i>
+                    <i class="text-2xl fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- About Me -->
+    <section class="mt-20">
+        <div class="flex flex-col md:flex-row xl:flex-row justify-center items-center gap-20">
+            <div>
+                <img class="md:w-[600px] md:h-[550px] xl:w-[600px] xl:h-[550px]" src="./images/2.png" alt="">
+            </div>
+            <div class="p-2 xl:p-0 md:w-1/2 xl:w-1/4">
+                <h3 class="text-6xl font-bold">About Me</h3>
+                <p class="mt-6">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in.
+                    Aliquet donec
+                    morbi convallis pretium. Turpis tempus pharetra</p>
+
+                <h3 class="text-lg font-bold mt-4">UX</h3>
+                <div class="relative w-full bg-gray-200 rounded-full h-2 mt-4">
+
+                    <div class="bg-orange-500 h-2 rounded-full" style="width: 90%;"></div>
+
+
+                    <div class="absolute top-0 -mt-1.5 h-5 w-5 bg-[#EDECEC] rounded-full border-2 border-orange-500"
+                        style="left: calc(91% - 0.875rem);"></div>
+                </div>
+
+
+                <h3 class="text-lg font-bold mt-4">Website Design</h3>
+                <div class="relative w-full bg-gray-200 rounded-full h-2 mt-4">
+
+                    <div class="bg-orange-500 h-2 rounded-full" style="width: 85%;"></div>
+
+
+                    <div class="absolute top-0 -mt-1.5 h-5 w-5 bg-[#EDECEC] rounded-full border-2 border-orange-500"
+                        style="left: calc(86% - 0.875rem);"></div>
+                </div>
+
+                <h3 class="text-lg font-bold mt-4">App Design</h3>
+                <div class="relative w-full bg-gray-200 rounded-full h-2 mt-4">
+
+                    <div class="bg-orange-500 h-2 rounded-full" style="width: 95%;"></div>
+
+
+                    <div class="absolute top-0 -mt-1.5 h-5 w-5 bg-[#EDECEC] rounded-full border-2 border-orange-500"
+                        style="left: calc(96% - 0.875rem);"></div>
+                </div>
+
+
+                <h3 class="text-lg font-bold mt-4">Graphic Design </h3>
+                <div class="relative w-full bg-gray-200 rounded-full h-2 mt-4">
+
+                    <div class="bg-orange-500 h-2 rounded-full" style="width: 90%;"></div>
+
+
+                    <div class="absolute top-0 -mt-1.5 h-5 w-5 bg-[#EDECEC] rounded-full border-2 border-orange-500"
+                        style="left: calc(91% - 0.875rem);"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Services -->
+    <section class="mt-20">
+        <div class="flex flex-col justify-center items-center">
+            <h3 class="text-5xl font-bold">Services</h3>
+            <p class="xl:w-1/3 text-center mt-6">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+                lectus netus in.
+                Aliquet donec morbi
+                convallis pretium</p>
+        </div>
+
+
+        <div
+            class="grid md:grid-cols-2 md:justify-items-center xl:flex xl:flex-row items-center justify-center mt-16 gap-6">
+            <div class="bg-[#F8F8F8] p-6 rounded-xl w-[330px] h-[310px]">
+                <img class="mt-6" src="./images/services/1.png" alt="">
+                <h3 class="text-2xl font-bold mt-6">UI/UX</h3>
+                <p class="mt-6">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+            </div>
+
+            <div class="bg-[#F8F8F8] p-6 rounded-xl w-[330px] h-[310px]">
+                <img class="mt-6" src="./images/services/2.png" alt="">
+                <h3 class="text-2xl font-bold mt-6">Web Design</h3>
+                <p class="mt-6">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+            </div>
+
+            <div class="bg-[#F8F8F8] p-6 rounded-xl w-[330px] h-[310px]">
+                <img class="mt-6" src="./images/services/3.png" alt="">
+                <h3 class="text-2xl font-bold mt-6">App Design</h3>
+                <p class="mt-6">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+            </div>
+
+            <div class="bg-[#F8F8F8] p-6 rounded-xl w-[330px] h-[310px]">
+                <img class="mt-6" src="./images/services/4.png" alt="">
+                <h3 class="text-2xl font-bold mt-6">Graphic Design</h3>
+                <p class="mt-6">Lorem ipsum dolor sit amet consectetur. Morbi diam nisi nam diam interdum</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- My Projects -->
+    <section class="mt-20">
+        <div class="flex flex-col justify-center items-center">
+            <h3 class="text-5xl font-bold">My Projects</h3>
+            <p class="xl:w-1/3 text-center mt-6">Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris
+                est risus lectus. Phasellus consequat urna tellus</p>
+        </div>
+
+
+        <div class="flex justify-center p-2 xl:p-0 mt-6 gap-2">
+            <button class="px-3 py-2 rounded-xl text-black bg-[#F8F8F8] border">All</button>
+            <button class="px-3 py-2 rounded-xl text-black bg-[#F8F8F8] border">UI/UX</button>
+            <button class="px-3 py-2 rounded-xl text-white bg-[#FD6F00] border">Web Design</button>
+            <button class="px-3 py-2 rounded-xl text-black bg-[#F8F8F8] border">App Design</button>
+            <button class="px-3 py-2 rounded-xl text-black bg-[#F8F8F8] border">Graphic Design</button>
+        </div>
+
+
+        <div class="flex flex-col xl:flex-row p-2 xl:p-0  md:items-center justify-center gap-8 mt-20">
+            <div>
+                <img src="./images/projects/1.png" alt="">
+                <p class="text-[#FD6F00] mt-4">Web Design</p>
+                <h3 class="text-2xl font-bold mt-3">AirCalling Landing Page Design</h3>
+            </div>
+            <div>
+                <img src="./images/projects/2.png" alt="">
+                <p class="text-[#FD6F00] mt-4">Web Design</p>
+                <h3 class="text-2xl font-bold mt-3">Business Landing Page Design</h3>
+            </div>
+            <div>
+                <img src="./images/projects/3.png" alt="">
+                <p class="text-[#FD6F00] mt-4">Web Design</p>
+                <h3 class="text-2xl font-bold mt-3">Ecom Web Page Design</h3>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Testimonials -->
+    <section class="mt-32">
+        <div class="flex flex-col justify-center items-center">
+            <h3 class="text-5xl font-bold">Testimonials</h3>
+            <p class="xl:w-1/3 text-center mt-6">Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris
+                est risus lectus. Phasellus consequat urna tellus</p>
+        </div>
+
+
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide rounded-md bg-[#F8F8F8]">
+                    <img src="./images/testimonials/2.png" alt="">
+                    <div>
+                        <p><span class="text-orange-500">"</span>Lorem ipsum dolor sit amet consectetur. In enim cursus
+                            odio
+                            accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor
+                            elementum convallis dignissim malesuada commodo ultrices. <span
+                                class="text-orange-500">"</span>
+                        </p>
+
+                        <h3>Name</h3>
+                        <p>CEO</p>
+                    </div>
+
+                </div>
+                <div class="swiper-slide rounded-md bg-[#F8F8F8]">
+                    <img src="./images/testimonials/1.png" alt="">
+                    <p><span class="text-orange-500">"</span>Lorem ipsum dolor sit amet consectetur. In enim cursus odio
+                        accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor
+                        elementum convallis dignissim malesuada commodo ultrices. <span class="text-orange-500">"</span>
+                    </p>
+                </div>
+                <div class="swiper-slide rounded-md bg-[#F8F8F8]">
+                    <img src="./images/testimonials/2.png" alt="">
+                    <p><span class="text-orange-500">"</span>Lorem ipsum dolor sit amet consectetur. In enim cursus odio
+                        accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor
+                        elementum convallis dignissim malesuada commodo ultrices. <span class="text-orange-500">"</span>
+                    </p>
+                </div>
+                <div class="swiper-slide rounded-md bg-[#F8F8F8]">
+                    <img src="./images/testimonials/1.png" alt="">
+                    <p><span class="text-orange-500">"</span>Lorem ipsum dolor sit amet consectetur. In enim cursus odio
+                        accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor
+                        elementum convallis dignissim malesuada commodo ultrices. <span class="text-orange-500">"</span>
+                    </p>
+                </div>
+                <div class="swiper-slide rounded-md bg-[#F8F8F8]">
+                    <img src="./images/testimonials/2.png" alt="">
+                    <p><span class="text-orange-500">"</span>Lorem ipsum dolor sit amet consectetur. In enim cursus odio
+                        accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor
+                        elementum convallis dignissim malesuada commodo ultrices. <span class="text-orange-500">"</span>
+                    </p>
+                </div>
+
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+</body>
+
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 100,
+        freeMode: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: 'auto',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: false,
+        },
+        loop: true
+    });
+</script>
+
+
+</html>
