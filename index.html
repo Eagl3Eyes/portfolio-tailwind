@@ -16,14 +16,14 @@
     <style>
         @font-face {
             font-family: 'Poppins';
-            src: url('fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+            src: url('./fonts/Poppins/Poppins-Regular.ttf') format('truetype');
             font-weight: 400;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'Poppins';
-            src: url('fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+            src: url('./fonts/Poppins/Poppins-Bold.ttf') format('truetype');
             font-weight: 700;
             font-style: normal;
         }
@@ -77,7 +77,7 @@
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="./images/logo.png" class="h-20" alt="" />
+                <img class="h-20" src="./images/logo.png" alt="">
                 <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Name</span> -->
             </a>
             <button data-collapse-toggle="navbar-default" type="button"
@@ -95,32 +95,33 @@
                     class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-black bg-blue-700 rounded md:bg-transparent  md:p-0 dark:text-white md:dark:text-blue-500"
+                            class="block py-2 px-3 text-black bg-orange-600 rounded md:bg-transparent  md:p-0 dark:text-white md:hover:text-orange-600 md:dark:text-blue-500"
                             aria-current="page">Home</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About
                             Me</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Testimonials</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Testimonials</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-orange-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
                     </li>
                     <li>
-                        <a href="#" class="px-2 py-2 rounded bg-orange-500 text-white">Download CV</a>
+                        <a href="#" class="px-2 py-2 rounded bg-orange-500 hover:bg-orange-600 text-white">Download
+                            CV</a>
                     </li>
                 </ul>
             </div>
@@ -145,16 +146,17 @@
                 <p class="mt-6">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in.
                     Aliquet donec
                     morbi convallis pretium. Turpis tempus pharetra</p>
-                <button class="px-6 py-2 rounded-md bg-orange-500 text-white mt-3">Hire Me</button>
+                <button class="px-6 py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-white mt-3">Hire Me</button>
             </div>
             <div>
-                <img class="xl:w-[530px] xl:h-[610px]" src="./images/1.png" alt="">
+                <img class="xl:w-[530px] xl:h-[610px]" src="./images/1.png"
+                    alt="">
 
                 <div class="flex justify-center gap-4 mt-4">
-                    <i class="text-2xl fa-brands fa-facebook"></i>
-                    <i class="text-2xl fa-brands fa-twitter"></i>
-                    <i class="text-2xl fa-brands fa-instagram"></i>
-                    <i class="text-2xl fa-brands fa-linkedin"></i>
+                    <a href=""><i class="text-2xl hover:text-orange-500 fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="text-2xl hover:text-orange-500 fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="text-2xl hover:text-orange-500 fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="text-2xl hover:text-orange-500 fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -168,7 +170,8 @@
     <section class="mt-20">
         <div class="flex flex-col md:flex-row xl:flex-row justify-center items-center gap-20">
             <div>
-                <img class="md:w-[600px] md:h-[550px] xl:w-[600px] xl:h-[550px]" src="./images/2.png" alt="">
+                <img class="md:w-[600px] md:h-[550px] xl:w-[600px] xl:h-[550px]"
+                    src="./images/2.png" alt="">
             </div>
             <div class="p-2 xl:p-0 md:w-1/2 xl:w-1/4">
                 <h3 class="text-6xl font-bold">About Me</h3>
@@ -278,11 +281,17 @@
 
 
         <div class="flex justify-center p-2 xl:p-0 mt-6 gap-2">
-            <button class="px-3 py-2 rounded-xl text-black bg-[#F8F8F8] border">All</button>
-            <button class="px-3 py-2 rounded-xl text-black bg-[#F8F8F8] border">UI/UX</button>
-            <button class="px-3 py-2 rounded-xl text-white bg-[#FD6F00] border">Web Design</button>
-            <button class="px-3 py-2 rounded-xl text-black bg-[#F8F8F8] border">App Design</button>
-            <button class="px-3 py-2 rounded-xl text-black bg-[#F8F8F8] border">Graphic Design</button>
+            <button
+                class="px-3 py-2 rounded-xl text-black hover:text-white bg-[#F8F8F8] hover:bg-orange-600 border">All</button>
+            <button
+                class="px-3 py-2 rounded-xl text-black hover:text-white bg-[#F8F8F8] hover:bg-orange-600 border">UI/UX</button>
+            <button class="px-3 py-2 rounded-xl text-white hover:text-white bg-[#FD6F00] hover:bg-orange-600 border">Web
+                Design</button>
+            <button class="px-3 py-2 rounded-xl text-black hover:text-white bg-[#F8F8F8] hover:bg-orange-600 border">App
+                Design</button>
+            <button
+                class="px-3 py-2 rounded-xl text-black hover:text-white bg-[#F8F8F8] hover:bg-orange-600 border">Graphic
+                Design</button>
         </div>
 
 
@@ -424,7 +433,7 @@
         <div class="flex justify-center p-2 md:p-0 lg:p-0 xl:p-0 gap-4 mt-10">
             <input class="w-96 h-12 p-4 bg-[#F8F8F8] text-[#797979] rounded-md border border-[#AFAFAF]" type="email"
                 name="" placeholder="Enter Your Email" id="">
-            <button class="px-6 bg-orange-500 text-white rounded-md">Contact Me</button>
+            <button class="px-6 bg-orange-500 hover:bg-orange-600 text-white rounded-md">Contact Me</button>
         </div>
     </section>
 
@@ -434,22 +443,23 @@
     <!-- Footer -->
     <section class="mt-20">
         <div class="flex flex-col justify-center items-center bg-[#F8F8F8]">
-            <img class="w-[240px] h-[80px] mt-10" src="./images/logo.png" alt="">
+            <img class="w-[240px] h-[80px] mt-10" src="./images/logo.png"
+                alt="">
 
             <div class="flex flex-col md:flex-row xl:flex-row gap-2 xl:gap-6">
-                <a href="">Home</a>
-                <a href="">About Me</a>
-                <a href="">Services</a>
-                <a href="">Projects</a>
-                <a href="">Testimonials</a>
-                <a href="">Contact</a>
+                <a class="hover:text-orange-600" href="">Home</a>
+                <a class="hover:text-orange-600" href="">About Me</a>
+                <a class="hover:text-orange-600" href="">Services</a>
+                <a class="hover:text-orange-600" href="">Projects</a>
+                <a class="hover:text-orange-600" href="">Testimonials</a>
+                <a class="hover:text-orange-600" href="">Contact</a>
             </div>
 
             <div class="flex gap-4 mt-4 mb-10">
-                <i class="text-2xl fa-brands fa-facebook"></i>
-                <i class="text-2xl fa-brands fa-twitter"></i>
-                <i class="text-2xl fa-brands fa-instagram"></i>
-                <i class="text-2xl fa-brands fa-linkedin"></i>
+                <i class="text-2xl hover:text-orange-600 fa-brands fa-facebook"></i>
+                <i class="text-2xl hover:text-orange-600 fa-brands fa-twitter"></i>
+                <i class="text-2xl hover:text-orange-600 fa-brands fa-instagram"></i>
+                <i class="text-2xl hover:text-orange-600 fa-brands fa-linkedin"></i>
             </div>
         </div>
 
